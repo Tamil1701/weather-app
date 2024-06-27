@@ -121,3 +121,23 @@ body{
   
     
 }
+@media (max-width: 600px) {
+    .search {
+        flex-direction: column;
+        
+        align-items: center;
+        
+    }
+    .search input {
+        margin-right: 0;
+    }
+   
+    .details {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col {
+        justify-content: center;
+    }
+}
+

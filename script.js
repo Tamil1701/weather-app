@@ -1,65 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather app</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="card">
-        <div class="search">
-            <input list="cities" type="text" placeholder="Enter City Name" spellcheck="false">
-            <datalist id="cities">
-                <option value="New York"></option>
-                <option value="Los Angeles"></option>
-                <option value="Chicago"></option>
-                <option value="Houston"></option>
-                <option value="Phoenix"></option>
-                <option value="Philadelphia"></option>
-                <option value="San Antonio"></option>
-                <option value="San Diego"></option>
-                <option value="Dallas"></option>
-                <option value="San Jose"></option>
-            </datalist>
-            <button><img src="images/search.png" alt=""></button>
-
-    
-        </div>
-        <div class="error">
-            <p>Invallid</p>
-        </div>
-        <div class="weather">
-            <img src="images/rain.png" class="weather-icon">
-            <h1 class="temp">22°C</h1>
-            <h2 class="city">New York</h2>
-            <div class="details">
-                <div class="col">
-                    <img src="images/humidity.png">
-                    <div>
-                        <p class="humidity">50%</p>
-                        <p>Humidity</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="images/wind.png">
-                    <div>
-                        <p class="wind">15 km/h</p>
-                        <p>Wind Speed</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    <div class="genai">
-        <div class="response1"><h1>Suggestions</h1>
-            <div id="sugges"><p id="suggestion"></p></div>
-        </div>
-    </div>
-    
-    <script>
-        const searchBox = document.querySelector(".search input");
+const searchBox = document.querySelector(".search input");
         const searchBtn = document.querySelector(".search button");
         const weatherIcon = document.querySelector(".weather-icon")
         const apiKey="29f4ab4663d0d5ec91b3f7229339fb39";
@@ -93,7 +32,6 @@
 
             document.querySelector(".weather").style.display="block"
             document.querySelector(".error").style.display="none";}
-
             displaySuggestion(temper)
         }
         function displaySuggestion(temper) {
@@ -120,14 +58,3 @@
 
         })
         
-
-        
-
-        
-        
-        
-
-    </script>
-    
-</body>
-</html>
